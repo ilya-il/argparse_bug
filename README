@@ -21,7 +21,7 @@ But if you run it with '-h':
       -D D        D argument
 
 you'll see that '-F' and '-D' parameters are listed in optional arguments section - it's wrong.
-However in 'usage:' these parameters is shown as required - '(-F F | -D D)'.
+However in 'usage:' these parameters are shown as required - '(-F F | -D D)'.
 
 Tested on:
     Python 2.7.9
