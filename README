@@ -26,3 +26,5 @@ However in 'usage:' these parameters are shown as required - '(-F F | -D D)'.
 Tested on:
     Python 2.7.9
     Python 3.4
+
+    argparse version 1.1
