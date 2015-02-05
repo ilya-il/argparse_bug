@@ -1,0 +1,28 @@
+Required arguments in mutually exclusive group are listed as optional in argparse's '-h' output.
+
+In this example we have a mutually exclusive group of arguments with required=True option.
+So one of the arguments in this group is required. If you run this example without parameters
+you'll get an error:
+
+>argparse_bug.py
+    usage: argparse_bug.py [-h] (-F F | -D D)
+    argparse_bug.py: error: one of the arguments -F -D is required
+
+But if you run it with '-h':
+
+>argparse_bug.py -h
+    usage: argparse_bug.py [-h] (-F F | -D D)
+
+    Check required mutually exclusive group
+
+    optional arguments:
+      -h, --help  show this help message and exit
+      -F F        F argument
+      -D D        D argument
+
+you'll see that '-F' and '-D' parameters are listed in optional arguments section - it's wrong.
+However in 'usage:' these parameters is shown as required - '(-F F | -D D)'.
+
+Tested on:
+    Python 2.7.9
+    Python 3.4
